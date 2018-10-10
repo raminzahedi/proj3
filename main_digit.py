@@ -16,10 +16,9 @@ from sklearn.linear_model import LogisticRegression
 def model_run(model, name):
     
     start = time.time()
-    
     model.fit(X_tr, Y_tr)    
-    
     end = time.time()
+    
     print('training time for', name, 'on digits dataset :', end - start, 'seconds')
     
     Y_pred = model.predict(X_ts)
