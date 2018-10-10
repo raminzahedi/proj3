@@ -17,3 +17,8 @@ This is a classification predictive modeling problems and there are a total of 1
         
 the program prints the training time, number of misclassified samples and the accuracy score for all the requested classifiers.
 
+### Some sklearn decision tree pruning strategies 
+
+Max-depth: The maximum depth of the tree. defined in tree.py line 86.
+Min-samples-split: The minimum number of samples required to split an internal node. defined in tree.py line 100
+
