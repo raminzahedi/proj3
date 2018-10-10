@@ -1,6 +1,7 @@
 
 import time
-import warnings
+import warnings                                  # `do not disturbe` mode
+warnings.filterwarnings('ignore')
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
@@ -13,12 +14,11 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 
 def model_run(model, name):
+    
     start = time.time()
-    with warnings.catch_warnings():
-        warnings.simplefilter("ignore")
-        
-        model.fit(X_tr, Y_tr)
-        
+    
+    model.fit(X_tr, Y_tr)    
+    
     end = time.time()
     print('training time for', name, 'on digits dataset :', end - start, 'seconds')
     
@@ -49,4 +49,4 @@ model = KNeighborsClassifier(n_neighbors=5, metric='minkowski')
 model_run(model, 'KNN')
 
 model = LogisticRegression(C=100)
-model_run(model, 'Logistic Regression')
+model_run(model, 'Logistic Regression')   
