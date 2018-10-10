@@ -19,6 +19,6 @@ the program prints the training time, number of misclassified samples and the ac
 
 ### Some sklearn decision tree pruning strategies 
 
-Max-depth: The maximum depth of the tree. defined in tree.py line 86.
-Min-samples-split: The minimum number of samples required to split an internal node. defined in tree.py line 100
+* Max-depth: The maximum depth of the tree. defined in tree.py line 86.
+* Min-samples-split: The minimum number of samples required to split an internal node. defined in tree.py line 100
 
